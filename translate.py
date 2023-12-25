@@ -1,4 +1,4 @@
-#!/patrickpragman/PycharmProjects/models/translate/venv/bin/python
+#!/home/patrickpragman/PycharmProjects/models/translate/venv/bin/python
 import argparse
 from argostranslate import translate
 from langdetect import detect, detect_langs
