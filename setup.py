@@ -26,3 +26,13 @@ with open("translation_wrapper_template.sh", "r") as template_file:
 
 with open('translation_wrapper.sh', "w") as wrapper_script:
     wrapper_script.write(wrapper_contents)
+
+with open("translate.py", "r") as translate_dot_py:
+    script_contents = translate_dot_py.read()
+    my_path = "#!/home/patrickpragman/PycharmProjects/models/translate/venv/bin/python"
+    your_path = rf"#!{os.getcwd()}/venv/bin/python"
+    planned_output = script_contents.replace(my_path, your_path)
+
+with open("translate.py", "w") as translate_dot_py:
+    translate_dot_py.write(planned_output)
+

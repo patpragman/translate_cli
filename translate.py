@@ -35,8 +35,10 @@ def main(args):
     for from_lang in probs:
         if from_lang not in installed_languages:
             print(f'unable to translate from {from_lang}, not installed')
+            break
         if args.to_lang not in installed_languages:
             print(f'unable to translate to {args.to_lang}, not installed')
+            break
         else:
             from_language = installed_languages[from_lang]
             to_language = installed_languages[args.to_lang]
